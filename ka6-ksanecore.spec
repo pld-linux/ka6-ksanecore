@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	24.05.0
+%define		kdeappsver	24.05.1
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		ksanecore
 Summary:	ksanecore
 Name:		ka6-%{kaname}
-Version:	24.05.0
+Version:	24.05.1
 Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	3f673cdfe808ff9602cc7a197052e659
+# Source0-md5:	7ed53d9dd45e6eb50ab793cc750767ac
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Gui-devel >= 5.12.3
@@ -32,6 +32,7 @@ BuildRequires:	shared-mime-info
 BuildRequires:	tar >= 1:1.22
 BuildRequires:	xz
 Conflicts:	kde4-libksane >= 4.0
+Obsoletes:	ka5-%{kaname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -45,6 +46,7 @@ Summary:	Header files for %{kaname} development
 Summary(pl.UTF-8):	Pliki nagłówkowe dla programistów używających %{kaname}
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
+Obsoletes:	ka5-%{kaname}-devel < %{version}
 
 %description devel
 Header files for %{kaname} development.
