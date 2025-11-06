@@ -1,18 +1,18 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeappsver	25.08.2
+%define		kdeappsver	25.08.3
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		ksanecore
 Summary:	ksanecore
 Name:		ka6-%{kaname}
-Version:	25.08.2
-Release:	2
+Version:	25.08.3
+Release:	1
 License:	GPL v2+/LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
-# Source0-md5:	32a959ab02a9fcd16d52b4c117d5f1f6
+# Source0-md5:	7282ca0f3b0712268bed15528cd5355d
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel
 BuildRequires:	Qt6Gui-devel >= 5.12.3
@@ -89,7 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 %files -f %{kaname}.lang
 %defattr(644,root,root,755)
 %ghost %{_libdir}/libKSaneCore6.so.1
-%attr(755,root,root) %{_libdir}/libKSaneCore6.so.*.*
+%{_libdir}/libKSaneCore6.so.*.*
 
 %files devel
 %defattr(644,root,root,755)
