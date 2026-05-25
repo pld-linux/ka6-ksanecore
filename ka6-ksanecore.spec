@@ -37,10 +37,10 @@ Obsoletes:	ka5-%{kaname} < %{version}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-KSaneCore.
+Library providing logic to interface scanners.
 
 %description -l pl.UTF-8
-KSaneCore.
+Biblioteka, która dostarcza logikę do obsługiwania skanerów.
 
 %package devel
 Summary:	Header files for %{kaname} development
